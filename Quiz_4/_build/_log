@@ -1,0 +1,13 @@
+### Starting build.
+# Target: sum_10.ml.depends, tags: { extension:ml, file:sum_10.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules sum_10.ml > sum_10.ml.depends
+# Target: sum_10.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:sum_10.cmo, file:sum_10.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o sum_10.cmo sum_10.ml
++ /usr/bin/ocamlc.opt -c -o sum_10.cmo sum_10.ml
+File "sum_10.ml", line 3, characters 8-19:
+3 | let rec read_number () : int = 
+            ^^^^^^^^^^^
+Warning 26: unused variable read_number.
+# Target: sum_10.byte, tags: { byte, dont_link_with, extension:byte, file:sum_10.byte, link, ocaml, program, quiet }
+/usr/bin/ocamlc.opt sum_10.cmo -o sum_10.byte
+# Compilation successful.
